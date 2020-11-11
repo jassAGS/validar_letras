@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			Javascript!
+		</title>  
+		<style type="text/css">
+			.container{
+				width: 80%;
+				margin:auto;
+				min-height: 500px;
+				background-color: #F2EDEC;
+			}
+			.content{
+				width: 30%;
+				margin:auto;
+				float: left;
+				margin-left: 2%;
+				display: inline-block;
+			}
+			.form-element{
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body onkeydown="keyListener(event)" onmousemove="clickParrafito(event)"> 
+		<div class="container">
+
+			<div class="content">
+				<fieldset>
+					<legend>
+						Datos personales
+					</legend>
+
+
+					<div class="form-element">
+						<label>
+							Nombre
+						</label>
+						<input type="text" placeholder="juanito" name="nombre"  >
+					</div>
+
+					<div class="form-element">
+						<label>
+							Apellidos
+						</label>
+						<input type="text" placeholder="leon" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Fecha nacimiento
+						</label>
+						<input type="text" placeholder="090390" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Sexo
+						</label>
+						<select>
+							<option>M</option>
+							<option>H</option>
+						</select>
+					</div>
+
+					<div class="form-element">
+						<button onclick="saveDataForm()" onmouseover="rbc(this,1)" id="submitButtonForm" type="submit">
+							Gudardar información
+						</button>
+					</div>
+	 
+				</fieldset>
+
+				<div class="post">
+					<!-- <h1>
+						Título
+					</h1> -->
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+			
+			<div class="content">
+				<fieldset>
+					<legend>
+						Datos ubicación
+					</legend>
+
+
+					<div class="form-element">
+						<label>
+							Nombre
+						</label>
+						<input type="text" placeholder="juanito" name="nombre">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Apellidos
+						</label>
+						<input type="text" placeholder="leon" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Fecha nacimiento
+						</label>
+						<input type="text" placeholder="090390" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Sexo
+						</label>
+						<select id="gender">
+							<option>M</option>
+							<option>H</option>
+						</select>
+					</div>
+	 
+				</fieldset>
+				<div>
+					<p >
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+
+			<div class="content">
+				<fieldset>
+					<legend>
+						Datos laborales
+					</legend>
+
+
+					<div class="form-element">
+						<label>
+							Nombre
+						</label>
+						<input onkeypress="return soloLetras(event,this)" type="text" placeholder="este valdia" name="nombre">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Apellidos
+						</label>
+						<input type="text" placeholder="leon" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Fecha nacimiento
+						</label>
+						<input type="text" placeholder="090390" name="">
+					</div>
+
+					<div class="form-element">
+						<label>
+							Sexo
+						</label>
+						<select>
+							<option>M</option>
+							<option>H</option>
+						</select>
+					</div>
+	 
+				</fieldset>
+				<div>
+					<p id="parrafo">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div> 
+
+			<noscript>
+				<h1>
+					No soporta javascript
+				</h1>
+			</noscript>
+
+		</div> 
+		<script type="text/javascript">  
+
+			function soloLetras(e,target){
+                console.log(e.keyCode)
+                if (e.keyCode>=65 && e.keyCode<=90 || e.keyCode>=97 && e.keyCode<=122 || e.keyCode==32 ){
+                    return true;
+                }else{
+                    alert('Solo letras o espacios')
+                    return false;
+                }
+            }
+			
+		</script> 
+	</body>
+</html>
